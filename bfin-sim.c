@@ -37,7 +37,7 @@
 #define HOST_LONG_WORD_SIZE (sizeof (long) * 8)
 
 #define SIGNEXTEND(v, n) \
-  (((bs32)(v) << (HOST_LONG_WORD_SIZE - (n))) >> (HOST_LONG_WORD_SIZE - (n)))
+  (((long)(v) << (HOST_LONG_WORD_SIZE - (n))) >> (HOST_LONG_WORD_SIZE - (n)))
 
 static ATTRIBUTE_NORETURN void
 illegal_instruction (SIM_CPU *cpu)
